@@ -2,7 +2,7 @@
 class ParameterParser:
     def __init__(self, parameters):
         self.raw_parameters = parameters
-        self.progress_update_interval = 0
+        self.progress_update_interval = 30
         self.verbose = False
         self.torrent_file_path = ""
         self.save_dir_path = ""
@@ -23,4 +23,13 @@ class ParameterParser:
         # print(self.verbose)
         # print(self.torrent_file_path)
         # print(self.save_dir_path)
+
+    def get_progress_update_interval(self):
+        return self.progress_update_interval
+
+    def get_torrent_file_path(self):
+        return self.torrent_file_path
+
+    def get_save_dir_path(self):
+        return self.save_dir_path
 
